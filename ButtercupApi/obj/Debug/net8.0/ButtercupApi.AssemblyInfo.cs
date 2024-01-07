@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ButtercupApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+39c4f5eaa71271840002854371a8dfc6ea7dcf42")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+42c347a1d0bc9146a67e49187bb7e7fee38c7e44")]
 [assembly: System.Reflection.AssemblyProductAttribute("ButtercupApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ButtercupApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
