@@ -8,11 +8,10 @@ export async function getDirectoryContents(options) {
             .then(response => {
             if (response.status == 200 || response.status == 201) {
                 const data = response.data;
-                const vaultName = data.vaultName.substring(0, data.vaultName.indexOf('.'));
                 resolve([
                     {
-                        identifier: vaultName,
-                        name: vaultName,
+                        identifier: data.vaultName + ".bcup",
+                        name: data.vaultName + ".bcup",
                         type: "file",
                         size: data.vaultData.length
                     }

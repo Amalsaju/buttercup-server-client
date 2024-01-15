@@ -26,6 +26,6 @@
         "typescript": "^5.2.2"
     },
     "repository": {
-        "url": "https://github.com/Amalsaju/buttercup-server-client.git"
+        "url": "git://github.com/Amalsaju/buttercup-server-client.git"
     }
 }
