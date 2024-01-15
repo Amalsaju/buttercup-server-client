@@ -1,6 +1,0 @@
-@ButtercupApi_HostAddress = http://localhost:5019
-
-GET {{ButtercupApi_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
