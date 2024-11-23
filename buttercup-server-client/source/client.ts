@@ -20,16 +20,17 @@ export class ButtercupServerClient {
     }
 
     getUID(jwt) {
-        return this.hashString(jwt);
+        var p = jwt.split(".")[1];
+        return JSON.parse(atob(this.base64UrlToBase64(p))).uid;
     }
 
-    private hashString(input: string | null) {
-        const encoder = new TextEncoder();
-        const data = encoder.encode(input);
-        const hashBuffer = await crypto.subtle.digest('SHA-256', data);
-        const hashArray = Array.from(new Uint8Array(hashBuffer));
-        const hashHex = hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
-        return hashHex;
+    private base64UrlToBase64(base64Url) {
+        if (base64Url === null) return;
+        let base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+        while (base64.length % 4) {
+            base64 += '=';
+        }
+        return base64;
     }
 
     async getDirectoryContent(pathIdentifier?: PathIdentifier):
