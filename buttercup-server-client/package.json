@@ -1,6 +1,6 @@
 {
   "name": "@muddykat-tech/buttercup-server-client",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Basic client for Buttercup database server",
   "exports": "./dist/index.js",
   "react-native": "./dist/index.js",
