@@ -20,12 +20,11 @@ export class ButtercupServerClient {
     }
 
     getUID(jwt) {
-        var p = jwt.split(".")[1];
-        return JSON.parse(atob(this.base64UrlToBase64(p))).uid;
+        return JSON.parse(atob(this.base64UrlToBase64(jwt))).uid;
     }
 
     private base64UrlToBase64(base64Url) {
-        if (base64Url === null) return;
+        if (base64Url === null || base64Url === undefined) return;
         let base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
         while (base64.length % 4) {
             base64 += '=';

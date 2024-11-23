@@ -20,6 +20,7 @@ export class ButtercupServerClient {
     base64UrlToBase64(base64Url) {
         if (base64Url === null)
             return;
+        console.log("base64URL: ", base64Url);
         let base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
         while (base64.length % 4) {
             base64 += '=';

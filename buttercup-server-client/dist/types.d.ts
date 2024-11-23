@@ -1,4 +1,4 @@
-export type Identifier = string | number;
+export declare type Identifier = string | number;
 export interface PathIdentifier {
     identifier: Identifier;
     name: string;
